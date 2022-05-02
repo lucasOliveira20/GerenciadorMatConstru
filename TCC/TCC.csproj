@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{676CBCEA-606C-43F4-809D-085E7D9A9B1A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TCC</RootNamespace>
+    <AssemblyName>TCC</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GMap.NET.Core">
+      <HintPath>..\..\..\Release-NETv4.0\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms">
+      <HintPath>..\..\..\Release-NETv4.0\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsPresentation">
+      <HintPath>..\..\..\Release-NETv4.0\GMap.NET.WindowsPresentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entrega\agendarEntrega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entrega\agendarEntrega.Designer.cs">
+      <DependentUpon>agendarEntrega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entrega\GerenciamentoDeEntregas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entrega\GerenciamentoDeEntregas.Designer.cs">
+      <DependentUpon>GerenciamentoDeEntregas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estoque\Cadastro_Estoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estoque\Cadastro_Estoque.Designer.cs">
+      <DependentUpon>Cadastro_Estoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estoque\Gerenciamento_de_Estoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estoque\Gerenciamento_de_Estoque.Designer.cs">
+      <DependentUpon>Gerenciamento_de_Estoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerenciamento de Cadastros\Agencias_Bancarias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerenciamento de Cadastros\Agencias_Bancarias.Designer.cs">
+      <DependentUpon>Agencias_Bancarias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerenciamento de Cadastros\Cadastros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerenciamento de Cadastros\Cadastros.Designer.cs">
+      <DependentUpon>Cadastros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerenciamento de Cadastros\Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerenciamento de Cadastros\Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerenciamento de Cadastros\Fabricantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerenciamento de Cadastros\Fabricantes.Designer.cs">
+      <DependentUpon>Fabricantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerenciamento de Cadastros\FormasdePagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerenciamento de Cadastros\FormasdePagamento.Designer.cs">
+      <DependentUpon>FormasdePagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerenciamento de Cadastros\Fornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerenciamento de Cadastros\Fornecedores.Designer.cs">
+      <DependentUpon>Fornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerenciamento de Cadastros\Funcionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerenciamento de Cadastros\Funcionarios.Designer.cs">
+      <DependentUpon>Funcionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerenciamento de Cadastros\Funcoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerenciamento de Cadastros\Funcoes.Designer.cs">
+      <DependentUpon>Funcoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerenciamento de Cadastros\Localizacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerenciamento de Cadastros\Localizacoes.Designer.cs">
+      <DependentUpon>Localizacoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerenciamento de Cadastros\Produtos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerenciamento de Cadastros\Produtos.Designer.cs">
+      <DependentUpon>Produtos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerenciamento de Cadastros\Setores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerenciamento de Cadastros\Setores.Designer.cs">
+      <DependentUpon>Setores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerenciamento de Cadastros\Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerenciamento de Cadastros\Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerenciamento de Cadastros\Veiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerenciamento de Cadastros\Veiculos.Designer.cs">
+      <DependentUpon>Veiculos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerenciamento de Orçamento\Efetuar_Orcamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerenciamento de Orçamento\Efetuar_Orcamento.Designer.cs">
+      <DependentUpon>Efetuar_Orcamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerenciamento de Orçamento\Exibir_Orcamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerenciamento de Orçamento\Exibir_Orcamento.Designer.cs">
+      <DependentUpon>Exibir_Orcamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerenciamento de Vendas\ExibirVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerenciamento de Vendas\ExibirVendas.Designer.cs">
+      <DependentUpon>ExibirVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerenciamento de Vendas\FormPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerenciamento de Vendas\FormPagamento.Designer.cs">
+      <DependentUpon>FormPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Localizacao\RouteTracer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Localizacao\RouteTracer.Designer.cs">
+      <DependentUpon>RouteTracer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\PainelRelatorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorios\PainelRelatorios.Designer.cs">
+      <DependentUpon>PainelRelatorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\Relatorio_de_Entrega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Relatorio_de_Entrega.Designer.cs">
+      <DependentUpon>Relatorio_de_Entrega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\Relatorio_de_Estoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Relatorio_de_Estoque.Designer.cs">
+      <DependentUpon>Relatorio_de_Estoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\Relatorio_de_Fornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Relatorio_de_Fornecedores.Designer.cs">
+      <DependentUpon>Relatorio_de_Fornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\Relatorio_de_Vendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Relatorio_de_Vendas.Designer.cs">
+      <DependentUpon>Relatorio_de_Vendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\pesquisarPreço.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\pesquisarPreço.Designer.cs">
+      <DependentUpon>pesquisarPreço.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sistema\SobreNos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\SobreNos.Designer.cs">
+      <DependentUpon>SobreNos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerenciamento de Vendas\Vendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerenciamento de Vendas\Vendas.Designer.cs">
+      <DependentUpon>Vendas.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Entrega\agendarEntrega.resx">
+      <DependentUpon>agendarEntrega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entrega\GerenciamentoDeEntregas.resx">
+      <DependentUpon>GerenciamentoDeEntregas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estoque\Cadastro_Estoque.resx">
+      <DependentUpon>Cadastro_Estoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estoque\Gerenciamento_de_Estoque.resx">
+      <DependentUpon>Gerenciamento_de_Estoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerenciamento de Cadastros\Agencias_Bancarias.resx">
+      <DependentUpon>Agencias_Bancarias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerenciamento de Cadastros\Cadastros.resx">
+      <DependentUpon>Cadastros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerenciamento de Cadastros\Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerenciamento de Cadastros\Fabricantes.resx">
+      <DependentUpon>Fabricantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerenciamento de Cadastros\FormasdePagamento.resx">
+      <DependentUpon>FormasdePagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerenciamento de Cadastros\Fornecedores.resx">
+      <DependentUpon>Fornecedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerenciamento de Cadastros\Funcionarios.resx">
+      <DependentUpon>Funcionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerenciamento de Cadastros\Funcoes.resx">
+      <DependentUpon>Funcoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerenciamento de Cadastros\Localizacoes.resx">
+      <DependentUpon>Localizacoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerenciamento de Cadastros\Produtos.resx">
+      <DependentUpon>Produtos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerenciamento de Cadastros\Setores.resx">
+      <DependentUpon>Setores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerenciamento de Cadastros\Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerenciamento de Cadastros\Veiculos.resx">
+      <DependentUpon>Veiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerenciamento de Orçamento\Efetuar_Orcamento.resx">
+      <DependentUpon>Efetuar_Orcamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerenciamento de Orçamento\Exibir_Orcamento.resx">
+      <DependentUpon>Exibir_Orcamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerenciamento de Vendas\ExibirVendas.resx">
+      <DependentUpon>ExibirVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerenciamento de Vendas\FormPagamento.resx">
+      <DependentUpon>FormPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localizacao\RouteTracer.resx">
+      <DependentUpon>RouteTracer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\PainelRelatorios.resx">
+      <DependentUpon>PainelRelatorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\Relatorio_de_Entrega.resx">
+      <DependentUpon>Relatorio_de_Entrega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\Relatorio_de_Estoque.resx">
+      <DependentUpon>Relatorio_de_Estoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\Relatorio_de_Fornecedores.resx">
+      <DependentUpon>Relatorio_de_Fornecedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\Relatorio_de_Vendas.resx">
+      <DependentUpon>Relatorio_de_Vendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\pesquisarPreço.resx">
+      <DependentUpon>pesquisarPreço.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Sistema\SobreNos.resx">
+      <DependentUpon>SobreNos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerenciamento de Vendas\Vendas.resx">
+      <DependentUpon>Vendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DadosBD\DadosBD.csproj">
+      <Project>{25eae380-a7c0-459e-be7b-ab575bf3701d}</Project>
+      <Name>DadosBD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dados\Dados.csproj">
+      <Project>{a227c2a3-c41b-4450-9065-3ab1ff3a72b6}</Project>
+      <Name>Dados</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cadast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estoq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vendsa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Relator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entr.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
